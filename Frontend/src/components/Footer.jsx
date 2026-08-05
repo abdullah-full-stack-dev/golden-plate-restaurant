@@ -28,7 +28,7 @@ export const Footer = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        await axios.post("http://localhost:4000/api/create/subscribe", formData).then((res) => {
+        await axios.post("https://golden-plate-restaurant.onrender.com/api/create/subscribe", formData).then((res) => {
 
             console.log(res.data);
 

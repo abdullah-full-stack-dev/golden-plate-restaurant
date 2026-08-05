@@ -34,7 +34,7 @@ export const Reservation = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        await axios.post("http://localhost:4000/api/reservation/create", formData).then((res) => {
+        await axios.post("https://golden-plate-restaurant.onrender.com/api/reservation/create", formData).then((res) => {
 
             console.log(res.data);
 
