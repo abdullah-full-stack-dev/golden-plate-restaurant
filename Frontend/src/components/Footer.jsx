@@ -28,25 +28,32 @@ export const Footer = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        await axios.post("https://golden-plate-restaurant.onrender.com/api/create/subscribe", formData).then((res) => {
+        try {
+            const res = await axios.post(
+                "https://golden-plate-restaurant.onrender.com/api/create/subscribe",
+                formData
+            );
 
             console.log(res.data);
 
+            if (res.data.success) {
+                setFormData({
+                    email: "",
+                });
 
-            setFormData({
-                email: ""
-            });
-        })
+                toast.success(res.data.message || "Subscribed successfully");
 
-
-        toast.success("Subscribed Successfully!")
-        setTimeout(() => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-            });
-        }, 100);
-
+                setTimeout(() => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                    });
+                }, 100);
+            }
+        } catch (error) {
+            console.log(error.response?.data || error.message);
+            toast.error("Something went wrong");
+        }
     };
 
     return (
