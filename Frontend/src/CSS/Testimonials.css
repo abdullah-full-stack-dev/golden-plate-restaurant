@@ -1,0 +1,155 @@
+.Testimonials-section {
+    width: 100%;
+    padding: 100px 150px 20px;
+    position: relative;
+}
+
+.Testimonials-section .design5 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.Testimonials-section .design6 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.Testimonials-cont h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 200;
+    color: #f8f8f8;
+    text-align: center;
+}
+
+.Testimonials-cont p {
+    text-align: center;
+    margin: 8px 0;
+    color: #f8f8f8;
+
+}
+
+.Testimonials-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 30px auto;
+}
+
+.Test-cont {
+    width: 320px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    background-color: #111110;
+}
+
+.Test-cont img {
+    width: 50%;
+    border-radius: 50%;
+}
+
+.Test-cont h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #f8f8f8;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.Test-cont h3 {
+    font-weight: 300;
+    color: #ffbd67;
+    font-size: 13.5px;
+    text-align: center;
+    margin: 5px 0 7px;
+    letter-spacing: 1px;
+}
+
+.Test-cont p {
+    font-weight: 300;
+    color: #f8f8f8af;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+
+@media (max-width:1440px) {
+    .Test-cont {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media (max-width:1200px) {
+    .Testimonials-section {
+        padding: 100px 30px 20px;
+    }
+}
+
+@media (max-width:1024px) {
+    .Testimonials-section {
+        padding: 50px 30px 20px;
+    }
+}
+
+@media (max-width:960px) {
+
+    .Testimonials-section .design5,
+    .Testimonials-section .design6 {
+        display: none;
+    }
+
+    .Testimonials-content {
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+
+@media (max-width:786px) {
+    .Testimonials-section {
+        padding: 50px 20px 20px;
+    }
+
+    .Testimonials-cont h1 {
+        font-size: 30px;
+    }
+
+    .Test-cont {
+        width: auto;
+
+    }
+
+    .Test-cont img {
+        width: 50%;
+    }
+
+
+    .nob {
+        display: none;
+    }
+
+}
+
+@media (max-width:440px) {
+
+    .Test-cont h2 {
+        font-size: 14px;
+    }
+
+    .nob2 {
+        display: none;
+    }
+
+    .Test-cont h3 {
+        display: none;
+    }
+}

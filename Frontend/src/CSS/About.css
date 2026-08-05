@@ -1,0 +1,285 @@
+.About-section {
+    padding: 200px 120px 20px;
+    height: 100vh;
+}
+
+.About-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.About-images-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.About-images {
+    position: relative;
+    width: 450px;
+}
+
+.About-images img {
+    width: 100%;
+}
+
+.About-sec-image {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    animation: fadeUpDown 4s ease-in-out infinite;
+}
+
+@keyframes fadeUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+.About-sec-image img {
+    width: 200px;
+}
+
+.About-section .since {
+    position: absolute;
+    bottom: 92%;
+    right: 91.5%;
+}
+
+.About-section .since-content {
+    font-size: 18px;
+    text-align: center;
+    color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.About-section .roundedImgCont {
+    position: absolute;
+    bottom: 80%;
+    right: 81%;
+    width: 155px;
+    animation: round 6s linear infinite;
+
+}
+
+@keyframes round {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.About-section .roundedImgCont img {
+    width: 100%;
+}
+
+.About-content h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 200;
+    color: #f8f8f8;
+}
+
+.About-content p {
+    color: #f8f8f8b0;
+    font-size: 15px;
+    margin: 8px 0;
+    line-height: 24px;
+}
+
+.About-content ul {
+    color: #f8f8f8;
+    font-weight: 500;
+}
+
+.About-content ul li {
+    color: #f8f8f8b0;
+    font-weight: 300;
+    list-style: inside;
+    font-size: 13px;
+    letter-spacing: .5px;
+    margin: 5px 0;
+}
+
+.About-content button {
+    position: relative;
+    background: #ffbd67;
+    padding: 16px 24px;
+    border: 1px solid #ffbd67;
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    outline: none;
+    text-transform: uppercase;
+    z-index: 1;
+    overflow: hidden;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.About-content button::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 110%;
+    width: 100%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: #171615;
+    transition: .4s;
+    z-index: -1;
+}
+
+.About-content button:hover::before {
+    bottom: 0%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: .6s;
+}
+
+.About-content button .text {
+    transition: .6s;
+}
+
+.About-content button .text2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: max-content;
+    color: #ffbd67;
+}
+
+.About-content button:hover .text1 {
+    transform: translateY(-40px);
+}
+
+.About-content button:hover .text2 {
+    transform: translate(-50%, -200%);
+}
+
+@media (max-width:1440px) {
+
+    .About-section {
+        padding: 200px 80px 20px;
+    }
+
+    .About-cont {
+        width: 100%;
+    }
+
+    .About-images-cont {
+        display: flex;
+        justify-content: start;
+    }
+}
+
+@media (max-width:1200px) {
+    .About-images {
+        width: 350px;
+    }
+
+    .About-section .roundedImgCont {
+        right: 77.5%;
+        bottom: 77%;
+    }
+
+}
+
+@media (max-width:1024px) {
+
+    .About-section {
+        height: auto;
+    }
+
+    .About-cont {
+        grid-template-columns: 1fr;
+    }
+
+    .About-images-cont {
+        margin: 0 auto 130px;
+    }
+}
+
+@media (max-width:630px) {
+
+    .About-images-cont {
+        margin: 0 auto 80px;
+    }
+
+    .About-images {
+        width: 280px;
+    }
+
+    .About-sec-image img {
+        width: 100px;
+    }
+
+    .About-section .since {
+        bottom: 76%;
+        right: 75%;
+    }
+
+    .since .year {
+        font-size: 18px;
+    }
+
+    .About-section .since-content {
+        height: 80px;
+        width: 80px;
+        font-size: 12px;
+    }
+
+    .About-section .roundedImgCont {
+        width: 100px;
+        bottom: 72.8%;
+        right: 71.8%;
+    }
+
+    .About-content h1 {
+        font-size: 25px;
+    }
+
+    .About-content p {
+        font-size: 12.5px;
+        line-height: 20px;
+    }
+
+    .About-content ul li {
+        font-size: 10px;
+    }
+
+    .About-content button {
+        padding: 14px 18px;
+    }
+}
+
+@media (max-width:500px) {
+    .About-section {
+        padding: 150px 30px 20px;
+    }
+}

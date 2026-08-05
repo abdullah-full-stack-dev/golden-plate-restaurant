@@ -1,0 +1,198 @@
+.FeaturedMenu {
+    position: relative;
+}
+
+.FeaturedMenu .design1 {
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    opacity: 0.6;
+    animation: moving 4s linear infinite;
+}
+
+.FeaturedMenu .design2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.6;
+    animation: moving 4s linear infinite;
+}
+
+@keyframes moving {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.FeaturedMenu-section {
+    height: 100vh;
+    width: 100%;
+    padding: 100px 20px 20px;
+}
+
+
+
+.FeaturedMenu-content h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 200;
+    text-align: center;
+    color: #f8f8f8;
+}
+
+.FeaturedMenu-content p {
+    text-align: center;
+    color: #f8f8f8;
+    margin: 8px 0;
+}
+
+.FeaturedMenu-content .FeaturedMenu-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    width: 60%;
+    margin: 20px auto;
+}
+
+.FeaturedMenu-content .FeaturedMenu-image-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.FeaturedMenu-content .FeaturedMenu-image .image {
+    position: relative;
+    overflow: hidden;
+}
+
+.FeaturedMenu-content .FeaturedMenu-images img {
+    width: 100%;
+    cursor: pointer;
+    display: block;
+    transition: 0.8s ease;
+
+}
+
+
+.FeaturedMenu-content .FeaturedMenu-image .image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.534),
+            transparent);
+    transform: skewX(-25deg);
+    z-index: 2;
+}
+
+.FeaturedMenu-content .FeaturedMenu-image .image:hover::before {
+    animation: shine 1s ease;
+}
+
+@keyframes shine {
+    100% {
+        left: 140%;
+    }
+}
+
+.FeaturedMenu-content .FeaturedMenu-image-cont h2 {
+    text-align: center;
+    color: #f8f8f8;
+    font-weight: 200;
+    margin: 4px 0;
+    font-family: "Cormorant Garamond", serif;
+
+}
+
+.FeaturedMenu-content .FeaturedMenu-image-cont p {
+    font-size: 12px;
+    letter-spacing: 1px;
+    position: relative;
+    width: fit-content;
+    margin: 10px auto;
+    color: #ffbd67;
+    cursor: pointer;
+}
+
+
+.FeaturedMenu-content .FeaturedMenu-image-cont p::before,
+.FeaturedMenu-content .FeaturedMenu-image-cont p::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    left: 50%;
+    right: 50%;
+    margin-top: 10px;
+    background-color: #ffbd67;
+    transition: .4s;
+}
+
+.FeaturedMenu-content .FeaturedMenu-image-cont p::before {
+    top: 100%;
+}
+
+.FeaturedMenu-content .FeaturedMenu-image-cont p::after {
+    top: 120%;
+}
+
+.FeaturedMenu-content .FeaturedMenu-image-cont p:hover::before,
+.FeaturedMenu-content .FeaturedMenu-image-cont p:hover::after {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+@media (max-width:1366px) {
+    .FeaturedMenu-content .FeaturedMenu-images {
+        width: 80%;
+    }
+
+    .FeaturedMenu-content .FeaturedMenu-image {
+        width: 100%;
+    }
+}
+
+@media (max-width:1024px) {
+
+    .FeaturedMenu-section {
+        height: auto;
+        padding: 50px 20px 20px;
+    }
+
+    .FeaturedMenu .design1,
+    .FeaturedMenu .design2 {
+        display: none;
+    }
+}
+
+@media (max-width:786px) {
+    .FeaturedMenu-content h1 {
+        font-size: 30px;
+    }
+}
+
+
+
+@media (max-width:600px) {
+
+    .FeaturedMenu-content .FeaturedMenu-images {
+        width: 90%;
+    }
+
+    .FeaturedMenu-content p span {
+        display: none;
+    }
+}

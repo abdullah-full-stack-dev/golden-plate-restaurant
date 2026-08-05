@@ -1,0 +1,234 @@
+.MasterChef {
+    position: relative;
+}
+
+.MasterChef-section {
+    height: 100vh;
+    width: 100%;
+    padding: 100px 150px 20px;
+
+}
+
+.MasterChef .design3 {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    opacity: 0.6;
+    animation: moving 4s linear infinite;
+}
+
+.MasterChef .design4 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.6;
+    animation: moving 4s linear infinite;
+}
+
+@keyframes moving {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.MasterChef-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.MasterChef-cont .MasterChef-image {
+    width: 440px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.MasterChef-cont .MasterChef-image img {
+    width: 100%;
+}
+
+.MasterChef-cont .MasterChef-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.534),
+            transparent);
+    transform: skewX(-25deg);
+    z-index: 2;
+}
+
+.MasterChef-cont .MasterChef-image:hover::before {
+    animation: shine 1s ease;
+}
+
+@keyframes shine {
+    100% {
+        left: 140%;
+    }
+}
+
+
+.MasterChef-cont .MasterChef-content h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 200;
+    color: #f8f8f8;
+}
+
+.MasterChef-cont .MasterChef-content p {
+    font-weight: 300;
+    color: #f8f8f8af;
+    margin: 10px 0;
+}
+
+.MasterChef-cont .MasterChef-content ul li {
+    font-weight: 300;
+    color: #f8f8f8af;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.MasterChef-cont .MasterChef-content ul li span {
+    color: #ffbd67;
+    font-weight: 500;
+}
+
+.MasterChef-cont .MasterChef-content button {
+    position: relative;
+    background: #ffbd67;
+    padding: 16px 24px;
+    border: 1px solid #ffbd67;
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    outline: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.MasterChef-cont .MasterChef-content button::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 110%;
+    width: 100%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: #171615;
+    transition: .4s;
+    z-index: -1;
+}
+
+.MasterChef-cont .MasterChef-content button:hover::before {
+    bottom: 0%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: .6s;
+}
+
+.MasterChef-cont .MasterChef-content button .text {
+    transition: .6s;
+}
+
+.MasterChef-cont .MasterChef-content button .text2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: max-content;
+    color: #ffbd67;
+}
+
+.MasterChef-cont .MasterChef-content button:hover .text1 {
+    transform: translateY(-40px);
+}
+
+.MasterChef-cont .MasterChef-content button:hover .text2 {
+    transform: translate(-50%, -200%);
+}
+
+@media (max-width:1440px) {
+    .MasterChef-section {
+
+        padding: 100px 80px 20px;
+    }
+
+    .MasterChef-cont {
+        width: 90%;
+    }
+}
+
+@media (max-width:1024px) {
+    .MasterChef-section {
+        height: auto;
+        padding: 100px 10px 20px;
+    }
+
+    .MasterChef-cont {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .MasterChef-cont .MasterChef-image {
+        width: 50%;
+    }
+
+
+}
+
+@media (max-width:600px) {
+
+    .MasterChef-section {
+        padding: 40px 10px 20px;
+    }
+
+    .MasterChef-cont .MasterChef-image {
+        width: 65%;
+    }
+
+    .MasterChef-cont .MasterChef-content h1 {
+        font-size: 30px;
+    }
+
+    .MasterChef-cont .MasterChef-content p {
+        font-size: 14px;
+    }
+
+    .MasterChef-cont .MasterChef-content ul li {
+        font-size: 12px;
+    }
+
+    .MasterChef .design3 {
+        opacity: 0.3;
+        width: 300px;
+    }
+
+    .MasterChef .design4 {
+        display: none;
+    }
+}

@@ -1,0 +1,307 @@
+.navbar-cont {
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    padding: 2rem 1rem;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.4s ease, background 0.4s ease,
+        box-shadow 0.4s ease;
+
+}
+
+.navbar-cont.show {
+    transform: translateY(0);
+}
+
+.navbar-cont.hide {
+    transform: translateY(-100%);
+}
+
+.navbar-cont.bg {
+    background: rgba(23, 22, 21, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.navbar-cont img {
+    width: 240px;
+    cursor: pointer;
+}
+
+.navbar-cont ul {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-cont ul li a,
+.navbar-cont ul li {
+    color: #f8f8f8;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.navbar-cont ul li {
+    position: relative;
+
+
+}
+
+.navbar-cont ul li::before,
+.navbar-cont ul li::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    left: 50%;
+    right: 50%;
+    margin-top: 10px;
+    background-color: #ffbd67;
+    transition: .4s;
+}
+
+.navbar-cont ul li::before {
+    top: 100%;
+}
+
+.navbar-cont ul li::after {
+    top: 120%;
+}
+
+.navbar-cont ul li:hover::before,
+.navbar-cont ul li:hover::after {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.navbar-cont ul li a:hover {
+    color: #ffbd67;
+}
+
+
+.navbar-cont button {
+    position: relative;
+    background: #ffbd67;
+    padding: 16px 24px;
+    max-width: 150px;
+    border: 1px solid #ffbd67;
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    outline: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .4s;
+    cursor: pointer;
+}
+
+
+.navbar-cont button::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 110%;
+    width: 100%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: #171615;
+    transition: .4s;
+    z-index: -1;
+}
+
+.navbar-cont button:hover::before {
+    bottom: 0%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: .6s;
+}
+
+.navbar-cont button .text {
+    transition: .6s;
+}
+
+.navbar-cont button .text2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: max-content;
+    color: #ffbd67;
+}
+
+.navbar-cont button:hover .text1 {
+    transform: translateY(-40px);
+}
+
+.navbar-cont button:hover .text2 {
+    transform: translate(-50%, -200%);
+}
+
+.navbar-cont .menuIcon {
+    display: none;
+    cursor: pointer;
+}
+
+
+/* Menu Container */
+
+.menu-overlay {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #83838388;
+    z-index: 9999;
+}
+
+
+
+.menu-cont {
+    position: fixed;
+    height: 100%;
+    width: 60%;
+    z-index: 10000;
+    padding: 10px 20px;
+    background: #171615;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: .4s;
+}
+
+.showMenu {
+    transform: translateX(0);
+    transition: .4s;
+}
+
+.cross-icon-cont {
+    position: relative;
+}
+
+.menu-cont .cross-icon {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    padding: 4px;
+    border-radius: 50%;
+    border: 1px solid #f8f8f8;
+    color: #f8f8f8;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.menu-cont img {
+    width: 160px;
+    margin-top: 80px;
+}
+
+.menu-cont ul {
+    margin-top: 30px;
+}
+
+.menu-cont ul li {
+    padding: 15px 13px;
+    border-top: .1px solid #4e4e4e;
+
+}
+
+.menu-cont ul li,
+.menu-cont ul li a {
+    color: #f8f8f8;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+
+.nav-icon {
+    display: none;
+    color: #ffbd67;
+}
+
+.menu-cont ul li a.active .nav-icon {
+    display: block;
+}
+
+
+
+
+
+.menu-cont ul li:nth-last-child(1) {
+    border-bottom: .1px solid #4e4e4e;
+}
+
+.menu-cont .menu-address-details {
+    color: #f8f8f8;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.menu-cont .menu-address-details h1 {
+    font-family: "Cormorant Garamond", serif;
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
+.menu-cont .menu-address-details p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+.menu-cont .booking-request {
+    text-align: center;
+    color: #f8f8f8;
+    margin-top: 30px;
+}
+
+.menu-cont .booking-request p {
+    margin: 8px 0;
+}
+
+.menu-cont .booking-request span {
+    color: #aaaaaa;
+}
+
+.menu-cont .line-cont img {
+    margin-top: 30px;
+}
+
+@media (max-width:1024px) {
+
+
+    .navbar-cont ul {
+        display: none;
+
+    }
+
+    .navbar-cont button {
+        display: none;
+    }
+
+    .navbar-cont .menuIcon {
+        display: block;
+    }
+}
+
+
+@media (max-width:460px) {
+    .navbar-cont img {
+        width: 200px;
+    }
+
+
+}

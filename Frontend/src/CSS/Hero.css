@@ -1,0 +1,287 @@
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(rgba(10, 10, 15, 0.5));
+}
+
+.hero-section img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    transform: scale(1);
+    will-change: transform;
+    animation: zoomIn 4s linear forwards;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.12);
+    }
+
+}
+
+
+.hero-section .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #ebebeb;
+    width: 75%;
+
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.hero-section .content span {
+    font-size: 14px;
+}
+
+.hero-section .content .line {
+    width: 100px;
+    height: 10px;
+    text-align: center;
+}
+
+
+.hero-section .content h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 50px;
+    font-weight: 200;
+    animation: fadeUp 1s linear;
+}
+
+.hero-section .content p {
+    margin: 8px auto;
+    width: 50%;
+    animation: fadeUp 1s linear;
+}
+
+.hero-section .content button {
+    position: relative;
+    background: transparent;
+    padding: 16px 24px;
+    border: 1px solid #ffbd67;
+    color: #ffbd67;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    text-transform: uppercase;
+    outline: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .4s;
+    animation: fadeUp 1s linear;
+    cursor: pointer;
+}
+
+.hero-section .content button::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 110%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background: #ffbd67;
+    transition: .4s;
+    z-index: -1;
+}
+
+.hero-section .content button:hover::before {
+    top: 0%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    transition: .6s;
+}
+
+.hero-section .content button .text {
+    transition: .6s;
+}
+
+.hero-section .content button .text2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: max-content;
+    color: #000;
+}
+
+.hero-section .content button:hover .text1 {
+    transform: translateY(-40px);
+}
+
+.hero-section .content button:hover .text2 {
+    transform: translate(-50%, -200%);
+}
+
+
+.hero-section .arrow {
+    color: #ebebeb;
+}
+
+
+.hero-section .arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    border: 1px solid #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transform: rotate(45deg);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.hero-section .arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    border: 1px solid #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transform: rotate(45deg);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.hero-section .arrow-left svg,
+.hero-section .arrow-right svg {
+    transform: rotate(-45deg);
+}
+
+.hero-section .arrow-left:hover,
+.hero-section .arrow-right:hover {
+    background: #ffbd67;
+    border: 1px solid transparent;
+}
+
+.arrow-left:hover .arrow,
+.arrow-right:hover .arrow {
+    color: black;
+}
+
+.hero-section .border-rotate {
+    position: absolute;
+    top: 80%;
+    right: 10rem;
+    height: 100px;
+    width: 100px;
+    border: 1px solid #818181;
+    animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+
+}
+
+.hero-section .booking-banner {
+    position: absolute;
+    top: 80%;
+    right: 10rem;
+    width: 100px;
+    height: 100px;
+}
+
+.hero-section .booking-banner img {
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+}
+
+@media (max-width:1200px) {
+    .hero-section .content p {
+        width: 80%;
+    }
+}
+
+@media (max-width:1024px) {
+    .restaurant-details {
+        display: none;
+    }
+}
+
+@media (max-width:786px) {
+
+    .hero-section .content {
+        width: 100%;
+    }
+
+    .hero-section .content p {
+        display: none;
+    }
+
+    .hero-section .arrow-left {
+        padding: 6px;
+        left: 1rem;
+        top: 65%;
+    }
+
+    .hero-section .arrow-right {
+        padding: 6px;
+        right: 1rem;
+        top: 65%;
+    }
+
+    .hero-section .content h1 {
+        font-size: 30px;
+    }
+
+    .hero-section .booking-banner {
+        right: 1rem;
+    }
+
+    .hero-section .border-rotate {
+        right: 1rem;
+    }
+}
+
+@media (max-width:400px) {
+
+    .hero-section .arrow-left,
+    .hero-section .arrow-right {
+        display: none;
+    }
+
+
+
+    .hero-section .booking-banner {
+        right: 1rem;
+        width: 80px;
+        height: 80px;
+    }
+
+    .hero-section .border-rotate {
+        right: 1rem;
+        width: 80px;
+        height: 80px;
+
+    }
+}

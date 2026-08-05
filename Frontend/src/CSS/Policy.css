@@ -1,0 +1,66 @@
+.Policy-section {
+    padding: 200px 120px 20px;
+}
+
+.Policy-section h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 200;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #f8f8f8;
+}
+
+.Policy-section p {
+    text-align: center;
+    color: #f8f8f8;
+}
+
+.Policy-section ul li {
+    color: #f8f8f8c2;
+    margin: 10px 0;
+    font-size: 14px;
+    list-style: inside;
+}
+
+.Policy-section .policy-cont {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px 15px;
+    background-color: #111110;
+    border-left: 1px solid #ffbd67;
+    border-right: 1px solid #ffbd67;
+}
+
+.Policy-section .policy-cont h2 {
+    font-weight: 400;
+    color: #f8f8f8;
+}
+
+.Policy-section .policy-cont p {
+    margin: 8px 0;
+}
+
+.Policy-section .policy-cont p span {
+    color: #ffbd67;
+}
+
+@media (max-width:786px) {
+    .Policy-section {
+        padding: 150px 20px 20px;
+    }
+}
+
+@media (max-width:500px) {
+    .Policy-section .policy-cont h2 {
+        font-size: 20px;
+    }
+
+    .Policy-section .policy-cont p {
+        font-size: 14px;
+    }
+
+    .Policy-section ul li {
+        font-size: 12px;
+    }
+}

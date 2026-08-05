@@ -1,0 +1,359 @@
+.Reservation-section {
+    width: 100%;
+    padding: 100px 40px 20px;
+    margin: 0 auto;
+
+}
+
+.Reservation-section h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 200;
+    color: #f8f8f8;
+    text-align: center;
+
+}
+
+.Reservation-section p {
+    text-align: center;
+    margin: 8px 0;
+    color: #f8f8f8;
+}
+
+
+
+.Reservation {
+    width: 600px;
+    margin: 20px 20%;
+    position: relative;
+}
+
+.line-cont {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.line-cont img {
+    display: none;
+}
+
+.Reservation img {
+    width: 100%;
+}
+
+.Reservation-form-cont {
+    position: absolute;
+    left: 90%;
+    top: 10%;
+    background-color: #111110;
+    padding: 24px;
+
+}
+
+.Reservation-form-cont form {
+    width: 600px;
+}
+
+.Reservation-form-cont h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 200;
+    color: #f8f8f8;
+    text-align: center;
+}
+
+.Reservation-form-cont p {
+    color: #f8f8f8;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 7px 0 20px;
+}
+
+.Reservation-form-cont p span {
+    color: #ffbd67;
+}
+
+.Reservation-form-cont input {
+    width: 100%;
+    background-color: #171615;
+    color: #fff;
+    padding: 18px 20px;
+    border: none;
+    outline: none;
+}
+
+.Reservation-form-cont input::placeholder,
+.Reservation-form-cont select::placeholder,
+.Reservation-form-cont textarea::placeholder {
+    color: #f8f8f8;
+}
+
+.Reservation-form-cont input:active,
+.Reservation-form-cont .wrapper:active,
+.Reservation-form-cont textarea:active {
+    outline: 1px solid #ffbd67;
+}
+
+.Reservation-form-cont input:focus,
+.Reservation-form-cont .wrapper:focus,
+.Reservation-form-cont textarea:focus {
+    outline: 1px solid #ffbd67;
+}
+
+.Reservation-form-cont .wrapper,
+.Reservation-form-cont textarea {
+    background-color: #171615;
+    color: #fff;
+
+    border: none;
+    width: 100%;
+
+}
+
+.Reservation-form-cont .wrapper {
+    padding: 0 20px;
+}
+
+.Reservation-form-cont select {
+    width: 100%;
+    height: 100%;
+    background-color: #171615;
+    color: #f8f8f8;
+
+    border: none;
+}
+
+
+.Reservation-form-cont textarea {
+    height: 140px;
+    padding: 18px 20px;
+}
+
+.Reservation-form-cont .name-number-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+
+}
+
+.Reservation-form-cont .person-date-time-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Reservation-form-cont .person-date-time-cont input {
+    outline: none;
+}
+
+.person-date-time-cont .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+}
+
+.Reservation-form-cont form button {
+    position: relative;
+    width: 100%;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: #ffbd67;
+    color: #111110;
+    border: 1px solid #ffbd67;
+    outline: none;
+    margin-top: 20px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.Reservation-form-cont form button::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 110%;
+    width: 100%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: #171615;
+    transition: .4s;
+    z-index: -1;
+}
+
+.Reservation-form-cont form button:hover::before {
+    bottom: 0%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: .6s;
+}
+
+.Reservation-form-cont form button .text {
+    transition: .6s;
+}
+
+.Reservation-form-cont form button .text2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: max-content;
+    color: #ffbd67;
+}
+
+.Reservation-form-cont form button:hover .text1 {
+    transform: translateY(-40px);
+}
+
+.Reservation-form-cont form button:hover .text2 {
+    transform: translate(-50%, -200%);
+}
+
+@media (max-width:1440px) {
+    .Reservation {
+        margin: 20px 5%;
+
+    }
+
+    .Reservation-content {
+        width: 50%;
+    }
+}
+
+@media (max-width:1200px) {
+
+    .Reservation-content {
+        width: 1%;
+    }
+
+    .Reservation img {
+        width: 90%;
+    }
+
+    .Reservation-form-cont {
+        left: 80%;
+    }
+
+    .Reservation-form-cont form {
+        width: 500px;
+    }
+
+    .Reservation-form-cont .wrapper {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width:1024px) {
+
+    .Reservation-section {
+        padding: 50px 40px 20px;
+    }
+
+    .line-cont img {
+        display: block;
+    }
+
+    .Reservation {
+        width: auto;
+    }
+
+    .reserve-img-cont {
+        display: none;
+    }
+
+    .Reservation-content {
+        width: 100%;
+    }
+
+    .Reservation-form-parent-cont {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+
+    .Reservation-form-cont {
+        position: static;
+        z-index: 10;
+    }
+
+
+    .Reservation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Reservation-form-cont form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .Reservation-form-cont select {
+        padding: 20px 0;
+    }
+
+}
+
+
+@media (max-width:786px) {
+
+    .Reservation-section {
+        padding: 50px 20px 20px;
+    }
+
+
+    .Reservation-section h1 {
+        font-size: 30px;
+    }
+
+
+    .Reservation-form-cont h1 {
+        font-size: 30px;
+    }
+
+    .Reservation-section p {
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width:650px) {
+    .Reservation-form-cont .person-date-time-cont {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:600px) {
+
+
+    .Reservation {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .Reservation-form-cont .name-number-cont {
+        grid-template-columns: 1fr;
+    }
+
+    .Reservation-form-cont h1 {
+        font-size: 26px;
+    }
+
+    .Reservation-form-cont p {
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: 18px;
+    }
+
+}

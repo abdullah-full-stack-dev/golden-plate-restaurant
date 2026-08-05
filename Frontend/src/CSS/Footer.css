@@ -1,0 +1,266 @@
+.Footer-section {
+    width: 100%;
+    position: relative;
+    background: linear-gradient(#0e0e0db0);
+    margin-top: 30px;
+}
+
+.design7 {
+    position: absolute;
+    z-index: -10;
+}
+
+.design8 {
+    position: absolute;
+    z-index: -10;
+    right: 0;
+}
+
+.design9 {
+    position: absolute;
+    z-index: -10;
+    bottom: 0;
+    left: 0;
+}
+
+.design10 {
+    position: absolute;
+    z-index: -10;
+    bottom: 0;
+    right: 0;
+}
+
+
+.footer-pattern {
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.Footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.Footer-content ul li {
+    position: relative;
+    color: #f8f8f891;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    transition: .4s;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Footer-content ul li::before,
+.Footer-content ul li::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    left: 50%;
+    right: 50%;
+    margin-top: 5px;
+    background-color: #ffbd67;
+    transition: .4s;
+}
+
+.Footer-content ul li::before {
+    top: 100%;
+}
+
+.Footer-content ul li::after {
+    top: 120%;
+}
+
+.Footer-content ul li:hover::before,
+.Footer-content ul li:hover::after {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.Footer-content ul li a:hover {
+    color: #ffbd67;
+}
+
+.Footer-content ul li a {
+    color: #f8f8f891;
+    transition: .4s;
+}
+
+.Footer-col {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+
+.Footer-logo-cont {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.Footer-logo-cont .Footer-logo {
+    width: 100%;
+}
+
+.Footer-text-content {
+    z-index: 10;
+    color: #f8f8f8;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Footer-text-content p {
+    margin: 10px 0;
+}
+
+.newsletter-box {
+    width: 500px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.newsletter-box h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 200;
+    color: #f8f8f8;
+    text-align: center;
+}
+
+.newsletter-box p {
+    color: #f8f8f8;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 15px;
+    margin: 2px 0 14px;
+}
+
+.newsletter-box p span {
+    color: #ffbd67;
+}
+
+.newsletter-box form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.newsletter-box-input-cont {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ffbd67;
+    padding: 0 15px;
+    height: 49px;
+}
+
+.newsletter-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: #f8f8f8;
+    outline: none;
+    background: transparent;
+}
+
+.newsletter-box button {
+    position: relative;
+    background: #ffbd67;
+    padding: 16px 24px;
+    max-width: 150px;
+    border: 1px solid #ffbd67;
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    outline: none;
+    text-transform: uppercase;
+    z-index: 1;
+    overflow: hidden;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 13px;
+    color: #f8f8f8;
+    letter-spacing: 1px;
+    padding: 20px 0;
+    border-top: .1px solid rgba(68, 68, 68, 0.411);
+}
+
+@media (max-width:1024px) {
+    .Footer-content {
+        width: 100%;
+    }
+}
+
+@media (max-width:600px) {
+
+    .design7,
+    .design8,
+    .design9,
+    .design10 {
+        width: 150px;
+        opacity: 0.9;
+    }
+
+    .Footer-content {
+        padding: 0 20px;
+    }
+
+    .Footer-content ul {
+        margin-top: 20px;
+    }
+
+    .Footer-content ul li {
+        font-size: 9px;
+    }
+
+    .Footer-logo-cont {
+        width: 120px;
+    }
+
+    .Footer-text-content p {
+        font-size: 12px;
+    }
+
+    .newsletter-box h1 {
+        font-size: 20px;
+    }
+
+    .newsletter-box {
+        width: 100%;
+    }
+
+    .newsletter-box p {
+        font-size: 12px;
+    }
+
+    .newsletter-box form {
+        padding: 0 15px;
+    }
+
+    .newsletter-box button {
+        padding-right: 37px;
+    }
+
+    .footer-bottom {
+        font-size: 10px;
+        letter-spacing: .3px;
+    }
+
+
+}
