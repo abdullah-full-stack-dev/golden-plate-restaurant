@@ -19,13 +19,7 @@ export const createSubscription = async (req, res) => {
             email
         })
 
-        res.send(
-            {
-                success: true,
-                message: "Subscribed successfully.",
-                subscription
-            }
-        )
+
 
         // sending mail to customer
         const mailOptions = {
@@ -52,6 +46,16 @@ export const createSubscription = async (req, res) => {
 
         await transporter.sendMail(mailOptions)
         await transporter.sendMail(mailOptions2)
+
+        res.send(
+            {
+                success: true,
+                message: "Subscribed successfully.",
+                subscription
+            }
+        )
+
+        console.log("Mail sent:", info.response);
 
     } catch (error) {
         console.log(error);
