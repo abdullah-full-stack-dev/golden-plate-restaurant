@@ -11,7 +11,10 @@ connectDb();
 let app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: "https://golden-plate-restaurant.netlify.app/",
+    credentials: true
+}));
 
 
 app.get("/", (req, res) => {
