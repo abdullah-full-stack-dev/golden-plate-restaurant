@@ -55,7 +55,7 @@ export const createSubscription = async (req, res) => {
             }
         )
 
-        console.log("Mail sent:", info.response);
+        // console.log("Mail sent:", info.response);
 
     } catch (error) {
         console.log(error);
