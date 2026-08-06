@@ -87,3 +87,42 @@ cd Backend
 npm install
 npm start
 ```
+
+## 🔐 Environment Variables
+
+Create a `.env` file in the Backend folder:
+
+```
+PORT=4000
+MONGO_URI=your_mongodb_connection
+JWT_SECRET=your_secret_key
+BREVO_API_KEY=your_brevo_api_key
+EMAIL_USER=your_email
+EMAIL_PASS=your_smtp_key
+```
+
+---
+
+## 🌐 Live Demo
+
+👉 https://golden-plate-restaurant.netlify.app/
+
+---
+
+## API Features
+
+#### Reservation API
+1 Create table reservation
+2 Store customer details
+3 Manage booking information
+
+#### Contact API
+1 Send customer messages
+2 Store contact inquiries
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home](Frontend/src/assets/screenshots/home.PNG)
