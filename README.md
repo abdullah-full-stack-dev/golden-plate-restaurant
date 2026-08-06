@@ -58,3 +58,13 @@ The main focus of this project is to deliver a luxurious restaurant experience w
 - Secure API handling
 - Fully responsive design for all devices
 - Optimized full-stack architecture
+
+## 📊 GitHub Stats
+
+<p align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=abdullah-full-stack-dev&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abdullah-full-stack-dev&layout=compact&theme=tokyonight" alt="Top Languages" />
+
+</p>
