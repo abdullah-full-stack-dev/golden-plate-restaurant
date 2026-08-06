@@ -59,3 +59,31 @@ The main focus of this project is to deliver a luxurious restaurant experience w
 - Fully responsive design for all devices
 - Optimized full-stack architecture
 
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository
+
+```
+git clone https://github.com/abdullah-full-stack-dev/golden-plate-restaurant.git
+cd golden-plate-restaurant
+```
+
+---
+
+### 2. Install dependencies
+
+#### Frontend
+
+```
+cd Frontend
+npm install
+npm run dev
+```
+
+#### Backend
+
+```
+cd Backend
+npm install
+npm start
+```
