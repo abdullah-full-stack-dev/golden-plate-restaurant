@@ -19,6 +19,13 @@ export const createSubscription = async (req, res) => {
             email
         })
 
+        transporter.verify((error, success) => {
+            if (error) {
+                console.log("SMTP ERROR:", error);
+            } else {
+                console.log("SMTP READY");
+            }
+        });
 
 
         // sending mail to customer
