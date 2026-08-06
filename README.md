@@ -38,3 +38,23 @@ A premium full-stack restaurant website built with modern web technologies.
 - Frontend: Netlify
 - Backend: Render
 - Database: MongoDB Atlas
+
+
+  ## 🍽️ About The Project
+
+**The Golden Plate Restaurant** is a modern full-stack restaurant web application designed to provide an elegant and seamless online dining experience.
+
+The platform features a premium restaurant interface where users can explore the menu, discover chef specialties, reserve tables, and contact the restaurant easily through an interactive and responsive design.
+
+Built with the **MERN Stack**, this project combines a fast React.js frontend with a powerful Node.js and Express.js backend, connected to MongoDB for efficient data management. The application also includes API integration using Axios and enhanced security with middleware like CORS and Helmet.
+
+The main focus of this project is to deliver a luxurious restaurant experience with clean UI, responsive layouts, smooth navigation, and reliable backend functionality.
+
+### ✨ Key Highlights:
+- Premium restaurant landing page with modern UI
+- Dynamic menu and chef showcase
+- Online table reservation system
+- Contact form with backend integration
+- Secure API handling
+- Fully responsive design for all devices
+- Optimized full-stack architecture
