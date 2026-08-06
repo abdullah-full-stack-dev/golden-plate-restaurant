@@ -59,12 +59,28 @@ The main focus of this project is to deliver a luxurious restaurant experience w
 - Fully responsive design for all devices
 - Optimized full-stack architecture
 
-## 📊 GitHub Stats
-
-<p align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=abdullah-full-stack-dev&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abdullah-full-stack-dev&layout=compact&theme=tokyonight" alt="Top Languages" />
-
-</p>
+## 📂 Project Structure
+Golden-Plate-Restaurant/
+│
+├── Frontend/
+│ ├── public/
+│ ├── src/
+│ │ ├── assets/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ ├── App.jsx
+│ │ └── main.jsx
+│ │
+│ ├── package.json
+│ └── vite.config.js
+│
+├── Backend/
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ ├── middleware/
+│ ├── server.js
+│ ├── package.json
+│ └── .env
+│
+└── README.md
