@@ -126,3 +126,12 @@ EMAIL_PASS=your_smtp_key
 
 ### 🏠 Home Page
 ![Home](Frontend/src/assets/screenshots/home.PNG)
+
+### 🏠 Menu Page
+![Home](Frontend/src/assets/screenshots/menu.PNG)
+
+### 🏠 About Page
+![Home](Frontend/src/assets/screenshots/about.PNG)
+
+### 🏠 Contact Page
+![Home](Frontend/src/assets/screenshots/contact.PNG)
