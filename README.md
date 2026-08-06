@@ -40,7 +40,7 @@ A premium full-stack restaurant website built with modern web technologies.
 - Database: MongoDB Atlas
 
 
-  ## 🍽️ About The Project
+## 🍽️ About The Project
 
 **The Golden Plate Restaurant** is a modern full-stack restaurant web application designed to provide an elegant and seamless online dining experience.
 
@@ -52,7 +52,7 @@ The main focus of this project is to deliver a luxurious restaurant experience w
 
 ### ✨ Key Highlights:
 - Premium restaurant landing page with modern UI
-- Dynamic menu and chef showcase
+- menu and chef showcase
 - Online table reservation system
 - Contact form with backend integration
 - Secure API handling
