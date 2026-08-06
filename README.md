@@ -135,3 +135,17 @@ EMAIL_PASS=your_smtp_key
 
 ### 🏠 Contact Page
 ![Home](Frontend/src/assets/screenshots/contact.PNG)
+
+---
+
+## 👨‍💻 Author
+
+* Abdullah Khan (Full Stack Web Developer)
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
+
+---
