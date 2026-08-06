@@ -1,5 +1,5 @@
 import reserveModel from "../models/reserveModel.js";
-import transporter from '../config/nodemailer.js'
+import sendBrevoMail from "../utils/sendBrevoMail.js";
 
 export const createReservation = async (req, res) => {
     try {
@@ -24,6 +24,41 @@ export const createReservation = async (req, res) => {
             message
         })
 
+        //user mail
+        await sendBrevoMail({
+            to: email,
+            subject: "Reservation Confirmed",
+            htmlContent: `
+              <h2>Hello ${name}</h2>
+          
+              <p>Your reservation request has been received.</p>
+          
+              <ul>
+                <li>Date: ${date}</li>
+                <li>Time: ${time}</li>
+                <li>Guests: ${persons}</li>
+              </ul>
+          
+              <p>We look forward to serving you!</p>
+            `,
+          });
+
+          // owner mail
+          await sendBrevoMail({
+            to: process.env.SENDER_EMAIL,
+            subject: "New Reservation",
+            htmlContent: `
+              <h2>New Reservation</h2>
+          
+              <p><b>Name:</b> ${name}</p>
+              <p><b>Email:</b> ${email}</p>
+              <p><b>Phone:</b> ${phone}</p>
+              <p><b>Date:</b> ${date}</p>
+              <p><b>Time:</b> ${time}</p>
+              <p><b>Guests:</b> ${persons}</p>
+              <p><b>Message:</b> ${message}</p>
+            `,
+          });
 
         res.send(
             {
@@ -33,37 +68,7 @@ export const createReservation = async (req, res) => {
             }
         )
 
-        // sending mail to customer
-        const mailOptions = {
-            from: process.env.SENDER_EMAIL,
-            to: email,
-            subject: "Reservation booked successfully.",
-            text: `Hey ${email}, your booking is successfull on ${date} at ${time}.
-            - The Golden Plate Restaurant
-            `
-        }
-
-        // sending mail to owner 
-        const mailOptions2 = {
-            from: process.env.SENDER_EMAIL,
-            to: process.env.SENDER_EMAIL,
-            subject: "New Reservation Received",
-
-            html: `
-        <h2>New Reservation</h2>
-
-        <p><b>Name:</b> ${name}</p>
-        <p><b>Email:</b> ${email}</p>
-        <p><b>Phone:</b> ${phone}</p>
-        <p><b>Guests:</b> ${persons}</p>
-        <p><b>Date:</b> ${date}</p>
-        <p><b>Time:</b> ${time}</p>
-        <p><b>Message:</b> ${message}</p>
-    `
-        }
-
-        await transporter.sendMail(mailOptions)
-        await transporter.sendMail(mailOptions2)
+        
 
 
     } catch (error) {

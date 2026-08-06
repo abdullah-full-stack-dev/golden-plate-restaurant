@@ -1,5 +1,5 @@
-import transporter from '../config/nodemailer.js';
 import contactModel from '../models/contactModel.js';
+import sendBrevoMail from '../utils/sendBrevoMail.js';
 
 export const contactUs = async (req, res) => {
     try {
@@ -22,6 +22,30 @@ export const contactUs = async (req, res) => {
             message
         })
 
+        // user mail
+        await sendBrevoMail({
+            to: email,
+            subject: "We've Received Your Message",
+            htmlContent: `
+              <h2>Thank You, ${name}</h2>
+              <p>We have received your message.</p>
+            `,
+        });
+
+        //owner mail
+        await sendBrevoMail({
+            to: process.env.SENDER_EMAIL,
+            subject: "New Contact Message",
+            htmlContent: `
+              <h2>New Contact</h2>
+          
+              <p><b>Name:</b> ${name}</p>
+              <p><b>Email:</b> ${email}</p>
+              <p><b>Subject:</b> ${subject}</p>
+              <p><b>Message:</b> ${message}</p>
+            `,
+        });
+
         res.send(
             {
                 success: true,
@@ -29,36 +53,6 @@ export const contactUs = async (req, res) => {
                 contact
             }
         )
-
-        // sending mail to customer
-        const mailOptions = {
-            from: process.env.SENDER_EMAIL,
-            to: email,
-            subject: "Enquiry Received successfully.",
-            text: `Hey ${email}, Thank you for contacting,
-            we will reach out you soon...
-            - The Golden Plate Restaurant
-            `
-        }
-
-        // sending mail to owner 
-        const mailOptions2 = {
-            from: process.env.SENDER_EMAIL,
-            to: process.env.SENDER_EMAIL,
-            subject: "New Enquiry Received",
-
-            html: `
-        <h2>New Enquiry</h2>
-        <p><b>Name:</b> ${name}</p>
-        <p><b>Email:</b> ${email}</p>
-        <p><b>Subject:</b> ${subject}</p>
-        <p><b>Message:</b> ${message}</p>
-        
-    `
-        }
-
-        await transporter.sendMail(mailOptions)
-        await transporter.sendMail(mailOptions2)
 
 
     } catch (error) {
