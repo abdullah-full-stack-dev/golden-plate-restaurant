@@ -29,30 +29,30 @@ export const createSubscription = async (req, res) => {
 
 
         // sending mail to customer
-        // const mailOptions = {
-        //     from: process.env.SENDER_EMAIL,
-        //     to: email,
-        //     subject: "Subscribed successfully.",
-        //     text: `Hey ${email}, Thank you for subscription.
-        //     - The Golden Plate Restaurant
-        //     `
-        // }
+        const mailOptions = {
+            from: process.env.SENDER_EMAIL,
+            to: email,
+            subject: "Subscribed successfully.",
+            text: `Hey ${email}, Thank you for subscription.
+            - The Golden Plate Restaurant
+            `
+        }
 
         // sending mail to owner 
-    //     const mailOptions2 = {
-    //         from: process.env.SENDER_EMAIL,
-    //         to: process.env.SENDER_EMAIL,
-    //         subject: "New Subscription Received",
+        const mailOptions2 = {
+            from: process.env.SENDER_EMAIL,
+            to: process.env.SENDER_EMAIL,
+            subject: "New Subscription Received",
 
-    //         html: `
-    //     <h2>New Subscription</h2>
-    //     <p><b>Email:</b> ${email}</p>
+            html: `
+        <h2>New Subscription</h2>
+        <p><b>Email:</b> ${email}</p>
         
-    // `
-    //     }
+    `
+        }
 
-    //     await transporter.sendMail(mailOptions)
-    //     await transporter.sendMail(mailOptions2)
+        await transporter.sendMail(mailOptions)
+        await transporter.sendMail(mailOptions2)
 
         res.send(
             {
