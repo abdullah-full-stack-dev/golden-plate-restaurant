@@ -13,3 +13,29 @@ A premium full-stack restaurant website built with modern web technologies.
 ![Axios](https://img.shields.io/badge/API-Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
 ![CORS](https://img.shields.io/badge/Security-CORS-orange?style=for-the-badge)
 ![Helmet](https://img.shields.io/badge/Security-Helmet.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- Vite
+- JavaScript
+- Axios
+- React Router DOM
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+
+### Security & Middleware
+- CORS
+- Helmet.js
+- Cookie Parser
+- dotenv
+
+### Deployment
+- Frontend: Netlify
+- Backend: Render
+- Database: MongoDB Atlas
