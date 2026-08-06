@@ -32,7 +32,6 @@ A premium full-stack restaurant website built with modern web technologies.
 ### Security & Middleware
 - CORS
 - Helmet.js
-- Cookie Parser
 - dotenv
 
 ### Deployment
