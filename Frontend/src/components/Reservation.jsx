@@ -39,7 +39,7 @@ export const Reservation = () => {
 
         try {
             await axios.post("https://golden-plate-restaurant.onrender.com/api/reservation/create", formData)
-            
+
             setFormData({
                 name: "",
                 email: "",
@@ -73,6 +73,7 @@ export const Reservation = () => {
                     <div className="page-loader-spinner"></div>
                 </div>
             )}
+            
             <div className='Reservation-section' id='reserveTable'>
                 <SubTitle text={"Reservation"} />
                 <h1>Reserve Your Table</h1>
