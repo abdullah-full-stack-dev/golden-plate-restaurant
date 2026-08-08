@@ -38,22 +38,19 @@ export const Footer = () => {
 
             console.log(res.data);
 
-            if (res.data.success) {
-                setFormData({
-                    email: "",
+            setFormData({
+                email: "",
+            });
+
+            toast.success("Subscribed successfully");
+
+            setTimeout(() => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
                 });
-
-                toast.success(res.data.message || "Subscribed successfully");
-
-                setTimeout(() => {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "smooth",
-                    });
-                }, 100);
-            }
+            }, 100);
         } catch (error) {
-            console.log(error.response?.data || error.message);
             toast.error("Something went wrong");
         } finally {
             setLoading(false);
@@ -67,7 +64,7 @@ export const Footer = () => {
                     <div className="page-loader-spinner"></div>
                 </div>
             )}
-            
+
             <div className='Footer-section'>
 
                 <img src={design7} alt="design7" className='design7' />
