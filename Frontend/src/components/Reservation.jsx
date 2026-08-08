@@ -160,7 +160,7 @@ export const Reservation = () => {
                                     </div>
 
                                     <div>
-                                        <button type='submit'>
+                                        <button>
                                             <div className='text text1'>Reserve Now</div>
                                             <div className='text text2' aria-hidden={true}>Reserve Now</div>
                                         </button>
