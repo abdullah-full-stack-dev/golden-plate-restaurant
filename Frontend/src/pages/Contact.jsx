@@ -33,6 +33,7 @@ export const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       const res = await axios.post("https://golden-plate-restaurant.onrender.com/api/gp/contact", formData)
