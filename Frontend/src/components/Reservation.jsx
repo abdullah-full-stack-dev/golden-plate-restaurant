@@ -12,6 +12,8 @@ import { useNavigate } from 'react-router-dom'
 
 export const Reservation = () => {
 
+    const [loading, setLoading] = useState(false);
+
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
@@ -33,32 +35,39 @@ export const Reservation = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
 
-        await axios.post("https://golden-plate-restaurant.onrender.com/api/reservation/create", formData).then((res) => {
+        try {
+            await axios.post("https://golden-plate-restaurant.onrender.com/api/reservation/create", formData).then((res) => {
 
-            console.log(res.data);
-
-
-            setFormData({
-                name: "",
-                email: "",
-                phone: "",
-                persons: "",
-                date: "",
-                time: "",
-                message: "",
-            });
-        })
+                console.log(res.data);
 
 
-        toast.success("Reservation Booked Successfully!")
-        navigate("/")
-        setTimeout(() => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-            });
-        }, 100);
+                setFormData({
+                    name: "",
+                    email: "",
+                    phone: "",
+                    persons: "",
+                    date: "",
+                    time: "",
+                    message: "",
+                });
+            })
+
+
+            toast.success("Reservation Booked Successfully!")
+            navigate("/")
+            setTimeout(() => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            }, 100);
+        } catch (error) {
+            toast.error("Something went wrong. Please try again.");
+        } finally {
+            setLoading(false);
+        }
 
     };
 
@@ -145,9 +154,16 @@ export const Reservation = () => {
                                 </div>
 
                                 <div>
-                                    <button>
-                                        <div className='text text1'>Reserve Now</div>
-                                        <div className='text text2' aria-hidden={true}>Reserve Now</div>
+                                    <button type='submit' disabled={loading}>
+                                        {loading ? (
+                                            <span className="loader"></span>
+                                        ) : (
+                                            <>
+                                                <div className='text text1'>Reserve Now</div>
+                                                <div className='text text2' aria-hidden={true}>Reserve Now</div>
+                                            </>
+                                        )}
+
                                     </button>
                                 </div>
                             </form>
