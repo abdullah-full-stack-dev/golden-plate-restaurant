@@ -38,22 +38,17 @@ export const Reservation = () => {
         setLoading(true);
 
         try {
-            await axios.post("https://golden-plate-restaurant.onrender.com/api/reservation/create", formData).then((res) => {
-
-                console.log(res.data);
-
-
-                setFormData({
-                    name: "",
-                    email: "",
-                    phone: "",
-                    persons: "",
-                    date: "",
-                    time: "",
-                    message: "",
-                });
-            })
-
+            await axios.post("https://golden-plate-restaurant.onrender.com/api/reservation/create", formData)
+            
+            setFormData({
+                name: "",
+                email: "",
+                phone: "",
+                persons: "",
+                date: "",
+                time: "",
+                message: "",
+            });
 
             toast.success("Reservation Booked Successfully!")
             navigate("/")
