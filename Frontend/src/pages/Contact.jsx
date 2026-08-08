@@ -35,7 +35,9 @@ export const Contact = () => {
     e.preventDefault();
 
     try {
-      await axios.post("https://golden-plate-restaurant.onrender.com/api/gp/contact", formData)
+      const res = await axios.post("https://golden-plate-restaurant.onrender.com/api/gp/contact", formData)
+
+      console.log(res.data);
 
       setFormData({
         name: "",
