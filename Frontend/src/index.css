@@ -141,16 +141,10 @@ button:disabled {
 .loader {
   width: 50px;
   height: 50px;
-  border: 3px solid rgba(255, 255, 255, 0.4);
-  border-top: 3px solid #fff;
+  border: 3px solid #ffbd67;
+  border-block-start-color: #696969;
   border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  animation: rotate360 1s linear infinite;
 }
 
 @media (max-width:786px) {
