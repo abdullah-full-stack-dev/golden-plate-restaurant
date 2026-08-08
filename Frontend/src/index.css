@@ -133,23 +133,37 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
-button:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
+/* Full Page Loader */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
 }
 
-.loader {
-  width: 50px;
-  height: 50px;
-  border: 3px solid #ffbd67;
-  border-block-start-color: #696969;
+/* Spinner */
+.page-loader-spinner {
+  width: 55px;
+  height: 55px;
+  border: 5px solid rgba(255, 189, 103, 0.3);
+  border-top: 5px solid #ffbd67;
   border-radius: 50%;
-  animation: rotate360 1s linear infinite;
+  animation: pageLoaderSpin 0.8s linear infinite;
+}
+
+@keyframes pageLoaderSpin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width:786px) {
-
-
 
   .intro {
     padding: 10px;
