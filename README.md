@@ -112,9 +112,9 @@ EMAIL_PASS=your_smtp_key
 ## API Features
 
 #### Reservation API
-1 Create table reservation
-2 Store customer details
-3 Manage booking information
+## 1 Create table reservation
+## 2 Store customer details
+## 3 Manage booking information
 
 #### Contact API
 1 Send customer messages
