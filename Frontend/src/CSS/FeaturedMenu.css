@@ -157,16 +157,19 @@
 
 @media (max-width:1440px) {
 
-    .FeaturedMenu-section {
-        height: 100vh;
-    }
-
     .FeaturedMenu-content .FeaturedMenu-images {
         width: 80%;
     }
 
     .FeaturedMenu-content .FeaturedMenu-image {
         width: 100%;
+    }
+}
+
+@media (max-width:1366px){
+    .FeaturedMenu .design1,
+    .FeaturedMenu .design2 {
+        display: none;
     }
 }
 
@@ -177,10 +180,7 @@
         padding: 50px 20px 20px;
     }
 
-    .FeaturedMenu .design1,
-    .FeaturedMenu .design2 {
-        display: none;
-    }
+    
 }
 
 @media (max-width:786px) {
