@@ -60,6 +60,11 @@
 }
 
 @media (max-width:1440px) {
+
+    .WhyChooseUs-section {
+        padding: 100px 30px 70px;
+    }
+
     .WhyChooseUs-content {
         width: 100%;
     }
