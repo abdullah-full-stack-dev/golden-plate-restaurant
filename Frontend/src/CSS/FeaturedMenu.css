@@ -157,6 +157,11 @@
 
 @media (max-width:1440px) {
 
+    .FeaturedMenu-section {
+        padding: 100px 20px 150px;
+    }
+    
+
     .FeaturedMenu-content .FeaturedMenu-images {
         width: 80%;
     }
