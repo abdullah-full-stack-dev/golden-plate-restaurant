@@ -216,6 +216,7 @@
 
     .About-section {
         height: auto;
+        padding-bottom: 0;
     }
 
     .About-cont {
