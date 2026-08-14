@@ -1,6 +1,6 @@
 .FeaturedMenu {
     position: relative;
-    height: 100vh;
+    padding: 0 0 100px;
 }
 
 .FeaturedMenu .design1 {

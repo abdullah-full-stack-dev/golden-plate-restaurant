@@ -1,5 +1,5 @@
 .About-section {
-    padding: 200px 120px 150px;
+    padding: 200px 120px 100px;
 }
 
 .About-cont {
@@ -186,7 +186,7 @@
 @media (max-width:1440px) {
 
     .About-section {
-        padding: 200px 80px 150px;
+        padding: 200px 80px 100px;
     }
 
     .About-cont {
