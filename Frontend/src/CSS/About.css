@@ -1,8 +1,5 @@
 .About-section {
     padding: 200px 120px 20px;
-    min-height: 500px;
-    height: auto;
-    overflow: hidden;
 }
 
 .About-cont {
@@ -15,6 +12,7 @@
 .About-images-cont {
     display: flex;
     justify-content: center;
+    padding-bottom: 150px;
 }
 
 .About-images {
@@ -224,6 +222,7 @@
 
     .About-images-cont {
         margin: 0 auto 130px;
+        padding-bottom: 0;
     }
 }
 
@@ -231,6 +230,7 @@
 
     .About-images-cont {
         margin: 0 auto 80px;
+        padding-bottom: 0;
     }
 
     .About-images {
