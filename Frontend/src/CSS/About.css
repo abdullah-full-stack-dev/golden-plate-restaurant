@@ -1,5 +1,8 @@
 .About-section {
     padding: 200px 120px 20px;
+    min-height: 500px;
+    height: auto;
+    overflow: hidden;
 }
 
 .About-cont {
