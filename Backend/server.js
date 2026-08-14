@@ -12,7 +12,7 @@ let app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin: "https://golden-plate-restaurant.netlify.app"
+    origin: "https://golden-plate-restaurant.vercel.app"
 }));
 
 
