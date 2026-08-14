@@ -155,7 +155,7 @@
     right: 0;
 }
 
-@media (max-width:1366px) {
+@media (max-width:1440px) {
     .FeaturedMenu-content .FeaturedMenu-images {
         width: 80%;
     }
