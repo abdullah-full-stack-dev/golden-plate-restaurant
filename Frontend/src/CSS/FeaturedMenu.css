@@ -156,6 +156,11 @@
 }
 
 @media (max-width:1440px) {
+
+    .FeaturedMenu-section {
+        height: 100vh;
+    }
+
     .FeaturedMenu-content .FeaturedMenu-images {
         width: 80%;
     }
