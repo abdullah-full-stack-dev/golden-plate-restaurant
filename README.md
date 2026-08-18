@@ -105,7 +105,7 @@ EMAIL_PASS=your_smtp_key
 
 ## 🌐 Live Demo
 
-👉 https://golden-plate-restaurant.netlify.app/
+👉 https://golden-plate-restaurant.vercel.app/
 
 ---
 
